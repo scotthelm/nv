@@ -18,17 +18,13 @@ RUN \
 
 RUN \
     git clone https://github.com/VundleVim/Vundle.vim.git \
-      ~/.vim/bundle/Vundle.vim
-
-RUN gem install bundler rubocop
-
-RUN mkdir -p ~/.config/nvim
-COPY ./init.vim /root/.config/nvim
-
-RUN \
-    nvim +PluginInstall +qall
-RUN \
+      ~/.vim/bundle/Vundle.vim && \
     git clone https://github.com/chriskempson/base16-shell.git \
-      ~/.config/base16-shell
-COPY ./.bashrc /root
-COPY ./.vimrc_background /root
+      ~/.config/base16-shell && \
+    git clone https://github.com/scotthelm/nv.git ~/nv && \
+    mkdir -p ~/.config/nvim && \
+    cp ~/nv/init.vim ~/.config/nvim && \
+    cp ~/nv/.bashrc ~/ && \
+    cp ~/nv/.vimrc_background ~/ && \
+    gem install bundler rubocop && \
+    nvim +PluginInstall +qall
