@@ -18,6 +18,7 @@ Plugin 'ctrlp.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'ervandew/supertab'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
