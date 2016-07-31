@@ -108,3 +108,5 @@ nmap <C-L> <C-W><C-L>
 map <Leader>t :CtrlP<CR>
 let g:ctrlp_custom_ignore = 'tmp$\|tags$\|\.ds_store$|\.swp$'
 let g:ctrlp_dotfiles = 0
+
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
