@@ -28,3 +28,5 @@ RUN \
     cp ~/nv/.vimrc_background ~/ && \
     gem install bundler rubocop && \
     nvim +PluginInstall +qall
+
+ENTRYPOINT ["nvim"]
